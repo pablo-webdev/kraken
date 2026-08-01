@@ -56,9 +56,6 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="assets/css/portafolio.css" />
-    <link rel="stylesheet" href="assets/css/variables.css" />
-    <link rel="stylesheet" href="assets/css/navbar.css" />
-    <link rel="stylesheet" href="assets/css/buttons.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
@@ -167,7 +164,7 @@
     </section>
 
     <!-- ===== FILTER & SEARCH ===== -->
-    <section class="filter-sec">
+    <section class="filter-sec" id="filterSec">
       <div class="container">
         <div class="filter-bar">
           <div class="filter-search-wrap">
@@ -849,10 +846,26 @@
           <div class="footer-col">
             <h4>Servicios</h4>
             <ul>
-              <li><a href="precios.html">Landing Page</a></li>
-              <li><a href="precios.html">Página Corporativa</a></li>
-              <li><a href="precios.html">E-Commerce / Catálogo</a></li>
-              <li><a href="precios.html">Tarjeta Corporativa Digital</a></li>
+              <li>
+                <a href="portafolio.html?filtro=landing#filterSec"
+                  >Landing Page</a
+                >
+              </li>
+              <li>
+                <a href="portafolio.html?filtro=corporativa#filterSec"
+                  >Página Corporativa</a
+                >
+              </li>
+              <li>
+                <a href="portafolio.html?filtro=ecommerce#filterSec"
+                  >E-Commerce / Catálogo</a
+                >
+              </li>
+              <li>
+                <a href="portafolio.html?filtro=tarjeta#filterSec"
+                  >Tarjeta Corporativa Digital</a
+                >
+              </li>
             </ul>
           </div>
 
@@ -928,5 +941,23 @@
 
     <!-- Scripts -->
     <script src="assets/js/portafolio.js"></script>
+
+    <!-- filtro del footer -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const filtroParam = urlParams.get("filtro");
+
+        if (filtroParam) {
+          const botonFiltro = document.querySelector(
+            `.fp[data-filter="${filtroParam}"]`,
+          );
+
+          if (botonFiltro) {
+            botonFiltro.click();
+          }
+        }
+      });
+    </script>
   </body>
 </html>

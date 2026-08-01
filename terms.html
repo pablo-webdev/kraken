@@ -36,6 +36,7 @@
       href="https://krakendev.site/media/favicon.ico"
     />
     <link rel="stylesheet" href="assets/css/contacto.css" />
+    <link rel="stylesheet" href="assets/css/terms.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
@@ -46,128 +47,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <style>
-      /* Estilos adicionales específicos para la página de Términos (coherentes con el ecosistema Kraken Dev) */
-      .terms-content {
-        background: #ffffff;
-        color: #2d3748;
-        padding: 60px 0;
-        font-family: "Poppins", sans-serif;
-      }
-      .terms-card {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
-        border-radius: 16px;
-        padding: 40px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-      }
-      .terms-card h2 {
-        font-size: 1.5rem;
-        color: #1a202c;
-        margin-top: 35px;
-        margin-bottom: 15px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .terms-card h2 i {
-        color: #0056b3;
-        font-size: 1.2rem;
-      }
-      .terms-card h2:first-of-type {
-        margin-top: 0;
-      }
-      .terms-card p,
-      .terms-card li {
-        font-size: 0.95rem;
-        line-height: 1.7;
-        color: #4a5568;
-        margin-bottom: 15px;
-      }
-      .terms-card ul {
-        margin-bottom: 20px;
-        padding-left: 20px;
-      }
-      .terms-card li {
-        margin-bottom: 8px;
-      }
-      .alert-box {
-        background: #fff3cd;
-        border-left: 4px solid #ffc107;
-        padding: 20px;
-        border-radius: 8px;
-        margin: 25px 0;
-        color: #856404;
-      }
-      .alert-box strong {
-        color: #533f03;
-      }
-      .legal-meta {
-        font-size: 0.85rem;
-        color: #718096;
-        border-bottom: 1px solid #e2e8f0;
-        padding-bottom: 20px;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      @media (max-width: 768px) {
-        .terms-card {
-          padding: 20px;
-        }
-      }
-
-      /* Corrección definitiva para el menú móvil y el overlay */
-      @media (max-width: 992px) {
-        #nav-links {
-          position: fixed !important;
-          top: 0 !important;
-          right: -100% !important;
-          width: 80% !important;
-          max-width: 320px !important;
-          height: 100vh !important;
-          background-color: #ffffff !important;
-          box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2) !important;
-          transition: right 0.3s ease-in-out !important;
-          z-index: 10002 !important;
-          display: flex !important;
-          flex-direction: column !important;
-          overflow-y: auto !important;
-        }
-
-        #nav-links.active {
-          right: 0 !important;
-        }
-
-        #nav-overlay {
-          position: fixed !important;
-          top: 0 !important;
-          left: 0 !important;
-          width: 100vw !important;
-          height: 100vh !important;
-          background-color: rgba(
-            0,
-            0,
-            0,
-            0.5
-          ) !important; /* Forzamos la transparencia */
-          opacity: 0 !important;
-          visibility: hidden !important;
-          transition:
-            opacity 0.3s ease,
-            visibility 0.3s ease !important;
-          z-index: 10001 !important;
-        }
-
-        #nav-overlay.active {
-          opacity: 0 !important;
-          visibility: visible !important;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -182,11 +61,11 @@
               this.nextElementSibling.style.display = 'block';
             "
           />
-          <span class="logo-fallback" style="display: none">KRAKEN DEV</span>
+          <span class="logo-fallback">KRAKEN DEV</span>
         </a>
         <ul class="nav-links" id="nav-links">
           <li class="mobile-menu-header">
-            <span class="mobile-brand">KRAKEN DEV</span>
+            <span class="mobile-brand">KRAKEN DEVELOPER</span>
           </li>
           <li>
             <a class="nav-link" href="index.html"
@@ -199,7 +78,7 @@
             >
           </li>
           <li>
-            <a class="nav-link" href="portafolio.html"
+            <a class="nav-link active" href="portafolio.html"
               ><i class="fas fa-images"></i><span>Portafolio</span></a
             >
           </li>
@@ -222,10 +101,10 @@
                 aria-label="Facebook"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="mailto:contacto@krakendev.site" aria-label="Correo"
+              <a href="mailto:contacto@krakendev.com" aria-label="Correo"
                 ><i class="fas fa-envelope"></i
               ></a>
-              <a href="tel:+529671523643" aria-label="Teléfono"
+              <a href="tel:+526692708687" aria-label="Teléfono"
                 ><i class="fas fa-phone"></i
               ></a>
             </div>
@@ -256,9 +135,9 @@
       </div>
       <div class="container">
         <div class="ph-content">
-          <span class="section-tag light">Marco Legal y Transparencia</span>
+          <span class="section-tag light">MARCO LEGAL Y TRANSPARENCIA</span>
           <h1 class="ph-title">
-            Términos y <span class="ph-accent">Condiciones</span>
+            Términos y <span class="ph-accent"> Condiciones</span>
           </h1>
           <p class="ph-sub">
             Reglas claras para garantizar una relación profesional exitosa,
@@ -540,10 +419,26 @@
           <div class="footer-col">
             <h4>Servicios</h4>
             <ul>
-              <li><a href="precios.html">Landing Page</a></li>
-              <li><a href="precios.html">Página Corporativa</a></li>
-              <li><a href="precios.html">E-Commerce / Catálogo</a></li>
-              <li><a href="precios.html">Tarjeta Corporativa Digital</a></li>
+              <li>
+                <a href="portafolio.html?filtro=landing#filterSec"
+                  >Landing Page</a
+                >
+              </li>
+              <li>
+                <a href="portafolio.html?filtro=corporativa#filterSec"
+                  >Página Corporativa</a
+                >
+              </li>
+              <li>
+                <a href="portafolio.html?filtro=ecommerce#filterSec"
+                  >E-Commerce / Catálogo</a
+                >
+              </li>
+              <li>
+                <a href="portafolio.html?filtro=tarjeta#filterSec"
+                  >Tarjeta Corporativa Digital</a
+                >
+              </li>
             </ul>
           </div>
 
@@ -617,32 +512,6 @@
       </a>
     </div>
 
-    <script>
-      // Menú hamburguesa y efecto Scroll Navbar
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("nav-links");
-      const navOverlay = document.getElementById("nav-overlay");
-      const navbar = document.getElementById("navbar");
-
-      if (hamburger) {
-        hamburger.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-          navOverlay.classList.toggle("active");
-        });
-        navOverlay.addEventListener("click", () => {
-          navLinks.classList.remove("active");
-          navOverlay.classList.remove("active");
-        });
-      }
-
-      // Activar estilos de scroll en el navbar
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
-    </script>
+    <script src="assets/js/portafolio.js"></script>
   </body>
 </html>

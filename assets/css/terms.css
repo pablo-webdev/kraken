@@ -1,0 +1,93 @@
+    <style>
+      /* Estilos adicionales específicos para la página de Términos (coherentes con el ecosistema Kraken Dev) */
+      .terms-content {
+        background: #ffffff;
+        color: #2d3748;
+        padding: 60px 0;
+        font-family: "Poppins", sans-serif;
+      }
+      .terms-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      }
+      .terms-card h2 {
+        font-size: 1.5rem;
+        color: #1a202c;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .terms-card h2 i {
+        color: #0056b3;
+        font-size: 1.2rem;
+      }
+      .terms-card h2:first-of-type {
+        margin-top: 0;
+      }
+      .terms-card p,
+      .terms-card li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #4a5568;
+        margin-bottom: 15px;
+      }
+      .terms-card ul {
+        margin-bottom: 20px;
+        padding-left: 20px;
+      }
+      .terms-card li {
+        margin-bottom: 8px;
+      }
+      .alert-box {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 25px 0;
+        color: #856404;
+      }
+      .alert-box strong {
+        color: #533f03;
+      }
+      .legal-meta {
+        font-size: 0.85rem;
+        color: #718096;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      @media (max-width: 768px) {
+        .terms-card {
+          padding: 20px;
+        }
+      }
+      .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease;
+        z-index: 998; /* Justo debajo del menú (que tiene 999) */
+      }
+
+      .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
