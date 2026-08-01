@@ -120,20 +120,51 @@
         }
       }
 
-      /* Corrección de estilos para el menú móvil en Kraken Dev */
+      /* Corrección definitiva para el menú móvil y el overlay */
       @media (max-width: 992px) {
-        .nav-links {
+        #nav-links {
+          position: fixed !important;
+          top: 0 !important;
+          right: -100% !important;
+          width: 80% !important;
+          max-width: 320px !important;
+          height: 100vh !important;
           background-color: #ffffff !important;
-          color: #2d3748 !important;
+          box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2) !important;
+          transition: right 0.3s ease-in-out !important;
+          z-index: 10002 !important;
+          display: flex !important;
+          flex-direction: column !important;
+          overflow-y: auto !important;
         }
-        .nav-links .nav-link {
-          color: #2d3748 !important;
+
+        #nav-links.active {
+          right: 0 !important;
         }
-        .nav-links .nav-link i {
-          color: #0056b3 !important;
+
+        #nav-overlay {
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          background-color: rgba(
+            0,
+            0,
+            0,
+            0.5
+          ) !important; /* Forzamos la transparencia */
+          opacity: 0 !important;
+          visibility: hidden !important;
+          transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease !important;
+          z-index: 10001 !important;
         }
-        .mobile-brand {
-          color: #1a202c !important;
+
+        #nav-overlay.active {
+          opacity: 0 !important;
+          visibility: visible !important;
         }
       }
     </style>
