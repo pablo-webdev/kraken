@@ -54,7 +54,7 @@ img { max-width: 100%; }
   max-width: 1200px; margin: 0 auto; padding: 0 24px;
 }
 .nav-logo { display: flex; align-items: center; cursor: pointer; }
-.nav-logo img { height: 44px; width: auto; object-fit: contain; }
+.nav-logo img { height: 32px; width: auto; object-fit: contain; }
 .logo-fallback { font-size: 1.5rem; font-weight: 800; color: #fff; display: none; }
 #navbar.scrolled .logo-fallback { color: var(--primary); }
 #navbar.scrolled .nav-logo img {
